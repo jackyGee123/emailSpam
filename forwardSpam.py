@@ -6,16 +6,15 @@ from email.Header import Header
 from email.mime.text import MIMEText
 #Open a file for reading
 
-me = 'andrewyli@gmail.com' # change to your email
-p_reader = open('password.txt', 'rb') # edit for your password
+me = 'Jackygee2013@gmail.com' # change to your email
+p_reader = open('Jackygee6509', 'rb') 
 cipher = p_reader.read()
-recipients = ['andrewyli@gmail.com'] # enter recipients here
+recipients = ['jackygee6509@gmail.com'] 
 
 
 def spamEveryMinute():
     while (True):
         fp = open('message.txt', 'rb')
-        #multipart class is for multiple recipients
         msg = MIMEText(fp.read(), 'plain', 'utf-8')
         fp.close()
 
@@ -33,6 +32,6 @@ def spamEveryMinute():
 
         print "Email sent to: " + ', '.join(recipients)
         s.quit()
-        time.sleep(60) # change rate of fire here
+        time.sleep(60) 
 
 spamEveryMinute()
